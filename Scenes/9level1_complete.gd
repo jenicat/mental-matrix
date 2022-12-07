@@ -1,9 +1,9 @@
-extends "res://Scenes/9level1.gd"
+extends Node2D
 
 func _ready():
-	attempts += 1
-	print("The number of attempts is ", (attempts))
-	$Attempts.text = str(attempts)
+	# attempts += 1 SN - delete this, we already add 1 in the previous scene
+	print("The number of attempts is ", (Globals.attempts))
+	$Attempts.text = str(Globals.attempts)
 
 
 func _on_click_to_continue_pressed():

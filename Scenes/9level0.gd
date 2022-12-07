@@ -1,7 +1,8 @@
-extends "res://Scenes/1main.gd"
+extends Node2D
 
 func _ready():
-		print("scene name = ", (name))
+	Globals.attempts = 0 # SN - since its a global variable, it wont get erased unless you manually reset it, we do this on every level
+	print("scene name = ", (name))
 
 func _on_exit_button_pressed():
 	var exit = load("res://Scenes/13exit.tscn").instance()
@@ -23,9 +24,9 @@ func _on_help_button_pressed():
 
 		
 func _on_check_button_pressed():
-	attempts += 1
-	print("The number of attempts is ", (attempts))
-	$Attempts.text = str(attempts)
+	Globals.attempts += 1
+	print("The number of attempts is ", (Globals.attempts))
+	$Attempts.text = str(Globals.attempts)
 	
 #	if ($a1.cell_value) == int(1):
 #		print("a1 ", $a1.cell_value)
