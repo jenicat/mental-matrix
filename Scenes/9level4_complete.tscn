@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/9level4_complete.gd" type="Script" id=1]
-[ext_resource path="res://Images/lava_castle.png" type="Texture" id=2]
+[ext_resource path="res://Images/cove_background.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/Baloo-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Images/large_box.png" type="Texture" id=4]
 [ext_resource path="res://Fonts/Brandon_reg.otf" type="DynamicFontData" id=5]

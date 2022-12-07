@@ -1,5 +1,5 @@
 extends "res://Scenes/1main.gd"
-	
+
 func _ready():
 		print("scene name = ", (name))
 
@@ -19,7 +19,7 @@ func _on_reset_button_pressed():
 func _on_help_button_pressed():
 	var help = load("res://Scenes/2intro.tscn").instance()
 	add_child(help)
-	remove_child(self)
+	#remove_child(self)
 
 		
 func _on_check_button_pressed():

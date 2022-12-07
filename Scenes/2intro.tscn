@@ -259,9 +259,9 @@ position = Vector2( 188.3, 480 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 5 )
 
-[node name="level_one" type="Button" parent="."]
+[node name="remove_self" type="Button" parent="."]
 margin_right = 1023.0
 margin_bottom = 600.0
 flat = true
 
-[connection signal="pressed" from="level_one" to="." method="_on_level_one_pressed"]
+[connection signal="pressed" from="remove_self" to="." method="_on_remove_self_pressed"]

@@ -92,10 +92,13 @@ margin_top = 123.0
 margin_right = 962.0
 margin_bottom = 260.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/line_spacing = -5
 custom_fonts/font = SubResource( 5 )
 text = "Nakasone is Kai's aunty.
 
-Igor's name is not Lorimer."
+
+Igor's name is not Lorimer.
+"
 autowrap = true
 
 [node name="Attempts" type="Label" parent="."]
