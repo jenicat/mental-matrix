@@ -1,9 +1,10 @@
-extends "res://Scenes/9level0.gd"
+extends Node2D
 
 
+#SN - changing attemps to Globals.attempts
 func _ready():
-	print("The number of attempts is ", (attempts))#I don't know how to call the number of attempts!
-	$Attempts.text = str(attempts)
+	print("The number of attempts is ", (Globals.attempts))#I don't know how to call the number of attempts!
+	$Attempts.text = str(Globals.attempts)
 
 func _on_click_to_continue_pressed():
 	var level_1 = load("res://Scenes/9level1.tscn").instance()

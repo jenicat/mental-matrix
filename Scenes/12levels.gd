@@ -1,4 +1,4 @@
-extends "res://Scenes/1main.gd"
+extends Node2D
 
 
 # Declare member variables here. Examples:
