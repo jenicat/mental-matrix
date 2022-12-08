@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Fonts/Brandon_reg.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Fonts/Baloo-Regular.ttf" type="DynamicFontData" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://Images/ice_mountain_background.png" type="Texture" id=4]
 [ext_resource path="res://Images/correct_100.png" type="Texture" id=5]
 [ext_resource path="res://Images/large_box.png" type="Texture" id=6]
-[ext_resource path="res://Scenes/disabled.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/12levels.gd" type="Script" id=8]
 
 [sub_resource type="DynamicFont" id=1]
@@ -206,146 +205,185 @@ text = "LEVEL 10"
 align = 1
 autowrap = true
 
-[node name="Level1" type="AspectRatioContainer" parent="."]
-margin_left = 217.0
-margin_top = 275.0
-margin_right = 217.0
-margin_bottom = 275.0
+[node name="Level_1" type="CenterContainer" parent="."]
+margin_left = 175.0
+margin_top = 241.0
+margin_right = 496.0
+margin_bottom = 562.0
+rect_scale = Vector2( 0.25, 0.25 )
 
-[node name="correct" type="Sprite" parent="Level1"]
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 5 )
+[node name="L1_button" type="TextureButton" parent="Level_1"]
+margin_right = 321.0
+margin_bottom = 321.0
+texture_normal = ExtResource( 5 )
+stretch_mode = 3
 
-[node name="disabled" type="Sprite" parent="Level1"]
-scale = Vector2( 0.25, 0.25 )
+[node name="L1_disabled" type="Sprite" parent="Level_1"]
+visible = false
 texture = ExtResource( 3 )
-script = ExtResource( 7 )
+centered = false
 
-[node name="Level2" type="AspectRatioContainer" parent="."]
-margin_left = 367.0
-margin_top = 275.0
-margin_right = 367.0
-margin_bottom = 275.0
+[node name="Level_2" type="CenterContainer" parent="."]
+margin_left = 325.0
+margin_top = 241.0
+margin_right = 646.0
+margin_bottom = 562.0
+rect_scale = Vector2( 0.25, 0.25 )
 
-[node name="correct" type="Sprite" parent="Level2"]
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 5 )
+[node name="L2_button" type="TextureButton" parent="Level_2"]
+visible = false
+margin_right = 321.0
+margin_bottom = 321.0
+texture_normal = ExtResource( 5 )
+stretch_mode = 3
 
-[node name="disabled" type="Sprite" parent="Level2"]
-scale = Vector2( 0.25, 0.25 )
+[node name="L2_disabled" type="Sprite" parent="Level_2"]
 texture = ExtResource( 3 )
+centered = false
 
-[node name="Level3" type="AspectRatioContainer" parent="."]
-margin_left = 517.0
-margin_top = 275.0
-margin_right = 517.0
-margin_bottom = 275.0
+[node name="Level_3" type="CenterContainer" parent="."]
+margin_left = 475.0
+margin_top = 241.0
+margin_right = 796.0
+margin_bottom = 562.0
+rect_scale = Vector2( 0.25, 0.25 )
 
-[node name="correct" type="Sprite" parent="Level3"]
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 5 )
+[node name="L3_button" type="TextureButton" parent="Level_3"]
+visible = false
+margin_right = 321.0
+margin_bottom = 321.0
+texture_normal = ExtResource( 5 )
+stretch_mode = 3
 
-[node name="disabled" type="Sprite" parent="Level3"]
-scale = Vector2( 0.25, 0.25 )
+[node name="L3_disabled" type="Sprite" parent="Level_3"]
 texture = ExtResource( 3 )
+centered = false
 
-[node name="Level4" type="AspectRatioContainer" parent="."]
-margin_left = 667.0
-margin_top = 275.0
-margin_right = 667.0
-margin_bottom = 275.0
+[node name="Level_4" type="CenterContainer" parent="."]
+margin_left = 625.0
+margin_top = 241.0
+margin_right = 946.0
+margin_bottom = 562.0
+rect_scale = Vector2( 0.25, 0.25 )
 
-[node name="correct" type="Sprite" parent="Level4"]
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 5 )
+[node name="L4_button" type="TextureButton" parent="Level_4"]
+visible = false
+margin_right = 321.0
+margin_bottom = 321.0
+texture_normal = ExtResource( 5 )
+stretch_mode = 3
 
-[node name="disabled" type="Sprite" parent="Level4"]
-scale = Vector2( 0.25, 0.25 )
+[node name="L4_disabled" type="Sprite" parent="Level_4"]
 texture = ExtResource( 3 )
+centered = false
 
-[node name="Level5" type="AspectRatioContainer" parent="."]
-margin_left = 817.0
-margin_top = 275.0
-margin_right = 817.0
-margin_bottom = 275.0
+[node name="Level_5" type="CenterContainer" parent="."]
+margin_left = 775.0
+margin_top = 241.0
+margin_right = 1096.0
+margin_bottom = 562.0
+rect_scale = Vector2( 0.25, 0.25 )
 
-[node name="correct" type="Sprite" parent="Level5"]
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 5 )
+[node name="L5_button" type="TextureButton" parent="Level_5"]
+visible = false
+margin_right = 321.0
+margin_bottom = 321.0
+texture_normal = ExtResource( 5 )
+stretch_mode = 3
 
-[node name="disabled" type="Sprite" parent="Level5"]
-scale = Vector2( 0.25, 0.25 )
+[node name="L5_disabled" type="Sprite" parent="Level_5"]
 texture = ExtResource( 3 )
+centered = false
 
-[node name="Level6" type="AspectRatioContainer" parent="."]
-margin_left = 217.0
-margin_top = 425.0
-margin_right = 217.0
-margin_bottom = 425.0
+[node name="Level_6" type="CenterContainer" parent="."]
+margin_left = 175.0
+margin_top = 389.0
+margin_right = 496.0
+margin_bottom = 710.0
+rect_scale = Vector2( 0.25, 0.25 )
 
-[node name="correct" type="Sprite" parent="Level6"]
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 5 )
+[node name="L6_button" type="TextureButton" parent="Level_6"]
+visible = false
+margin_right = 321.0
+margin_bottom = 321.0
+texture_normal = ExtResource( 5 )
+stretch_mode = 3
 
-[node name="disabled" type="Sprite" parent="Level6"]
-scale = Vector2( 0.25, 0.25 )
+[node name="L6_disabled" type="Sprite" parent="Level_6"]
 texture = ExtResource( 3 )
+centered = false
 
-[node name="Level7" type="AspectRatioContainer" parent="."]
-margin_left = 367.0
-margin_top = 425.0
-margin_right = 367.0
-margin_bottom = 425.0
+[node name="Level_7" type="CenterContainer" parent="."]
+margin_left = 325.0
+margin_top = 389.0
+margin_right = 646.0
+margin_bottom = 710.0
+rect_scale = Vector2( 0.25, 0.25 )
 
-[node name="correct" type="Sprite" parent="Level7"]
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 5 )
+[node name="L7_button" type="TextureButton" parent="Level_7"]
+visible = false
+margin_right = 321.0
+margin_bottom = 321.0
+texture_normal = ExtResource( 5 )
+stretch_mode = 3
 
-[node name="disabled" type="Sprite" parent="Level7"]
-scale = Vector2( 0.25, 0.25 )
+[node name="L7_disabled" type="Sprite" parent="Level_7"]
 texture = ExtResource( 3 )
+centered = false
 
-[node name="Level8" type="AspectRatioContainer" parent="."]
-margin_left = 517.0
-margin_top = 425.0
-margin_right = 517.0
-margin_bottom = 425.0
+[node name="Level_8" type="CenterContainer" parent="."]
+margin_left = 475.0
+margin_top = 389.0
+margin_right = 796.0
+margin_bottom = 710.0
+rect_scale = Vector2( 0.25, 0.25 )
 
-[node name="correct" type="Sprite" parent="Level8"]
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 5 )
+[node name="L8_button" type="TextureButton" parent="Level_8"]
+visible = false
+margin_right = 321.0
+margin_bottom = 321.0
+texture_normal = ExtResource( 5 )
+stretch_mode = 3
 
-[node name="disabled" type="Sprite" parent="Level8"]
-scale = Vector2( 0.25, 0.25 )
+[node name="L8_disabled" type="Sprite" parent="Level_8"]
 texture = ExtResource( 3 )
+centered = false
 
-[node name="Level9" type="AspectRatioContainer" parent="."]
-margin_left = 667.0
-margin_top = 425.0
-margin_right = 667.0
-margin_bottom = 425.0
+[node name="Level_9" type="CenterContainer" parent="."]
+margin_left = 625.0
+margin_top = 389.0
+margin_right = 946.0
+margin_bottom = 710.0
+rect_scale = Vector2( 0.25, 0.25 )
 
-[node name="correct" type="Sprite" parent="Level9"]
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 5 )
+[node name="L9_button" type="TextureButton" parent="Level_9"]
+visible = false
+margin_right = 321.0
+margin_bottom = 321.0
+texture_normal = ExtResource( 5 )
+stretch_mode = 3
 
-[node name="disabled" type="Sprite" parent="Level9"]
-scale = Vector2( 0.25, 0.25 )
+[node name="L9_disabled" type="Sprite" parent="Level_9"]
 texture = ExtResource( 3 )
+centered = false
 
-[node name="Level10" type="AspectRatioContainer" parent="."]
-margin_left = 817.0
-margin_top = 425.0
-margin_right = 817.0
-margin_bottom = 425.0
+[node name="Level_10" type="CenterContainer" parent="."]
+margin_left = 775.0
+margin_top = 389.0
+margin_right = 1096.0
+margin_bottom = 710.0
+rect_scale = Vector2( 0.25, 0.25 )
 
-[node name="correct" type="Sprite" parent="Level10"]
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 5 )
+[node name="L10_button" type="TextureButton" parent="Level_10"]
+visible = false
+margin_right = 321.0
+margin_bottom = 321.0
+texture_normal = ExtResource( 5 )
+stretch_mode = 3
 
-[node name="disabled" type="Sprite" parent="Level10"]
-scale = Vector2( 0.25, 0.25 )
+[node name="L10_disabled" type="Sprite" parent="Level_10"]
 texture = ExtResource( 3 )
+centered = false
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 margin_left = 242.0
@@ -353,3 +391,14 @@ margin_top = 177.0
 margin_right = 896.0
 margin_bottom = 178.0
 color = Color( 0, 0, 0, 1 )
+
+[connection signal="pressed" from="Level_1/L1_button" to="." method="_on_L1_button_pressed"]
+[connection signal="pressed" from="Level_2/L2_button" to="." method="_on_L2_button_pressed"]
+[connection signal="pressed" from="Level_3/L3_button" to="." method="_on_L3_button_pressed"]
+[connection signal="pressed" from="Level_4/L4_button" to="." method="_on_L4_button_pressed"]
+[connection signal="pressed" from="Level_5/L5_button" to="." method="_on_L5_button_pressed"]
+[connection signal="pressed" from="Level_6/L6_button" to="." method="_on_L6_button_pressed"]
+[connection signal="pressed" from="Level_7/L7_button" to="." method="_on_L7_button_pressed"]
+[connection signal="pressed" from="Level_8/L8_button" to="." method="_on_L8_button_pressed"]
+[connection signal="pressed" from="Level_9/L9_button" to="." method="_on_L9_button_pressed"]
+[connection signal="pressed" from="Level_10/L10_button" to="." method="_on_button_pressed"]

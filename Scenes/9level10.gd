@@ -20,7 +20,7 @@ func _on_reset_button_pressed():
 func _on_help_button_pressed():
 	var help = load("res://Scenes/2intro.tscn").instance()
 	add_child(help)
-	remove_child(self)
+	
 
 		
 func _on_check_button_pressed():
@@ -28,47 +28,202 @@ func _on_check_button_pressed():
 	print("The number of attempts is ", (Globals.attempts))
 	$Attempts.text = str(Globals.attempts)
 	
-	if ($a1.cell_value) == int(1):
-		print("a1 ", $a1.cell_value)
-		$a1/correct.visible = true
+#	if ($a1.cell_value) == int(1):
+#		print("a1 ", $a1.cell_value)
+#		$a1/correct.visible = true
 	
-	if ($a2.cell_value) == int(1):
-		print("a2 ", $a2.cell_value)
-		$a2/correct.visible = true
+#	if ($a2.cell_value) == int(1):
+#		print("a2 ", $a2.cell_value)
+#		$a2/correct.visible = true
 	
 	if ($a3.cell_value) == int(1):
 		print("a3 ", $a3.cell_value)
 		$a3/correct.visible = true
 	
+#	if ($a4.cell_value) == int(1):
+#		print("a4 ", $a4.cell_value)
+#		$a4/correct.visible = true
+	
+#	if ($a5.cell_value) == int(1):
+#		print("a5", $a5.cell_value)
+#		$a4/correct.visible = true
+
+#	if ($a6.cell_value) == int(1):
+#		print("a6", $a6.cell_value)
+#		$a6/correct.visible = true
+
+#	if ($a7.cell_value) == int(1):
+#		print("a7", $a7.cell_value)
+#		$a7/correct.visible = true
+
+#	if ($a8.cell_value) == int(1):
+#		print("a8", $a8.cell_value)
+#		$a4/correct.visible = true
 
 	if ($b1.cell_value) == int(1):
 		print("b1 ", $b1.cell_value)
 		$b1/correct.visible = true
 	
-	if ($b2.cell_value) == int(1):
-		print("b2 ", $b2.cell_value)
-		$b2/correct.visible = true
+#	if ($b2.cell_value) == int(1):
+#		print("b2 ", $b2.cell_value)
+#		$b2/correct.visible = true
 	
-	if ($b3.cell_value) == int(1):
-		print("b3 ", $b3.cell_value)
-		$b3/correct.visible = true
-
+#	if ($b3.cell_value) == int(1):
+#		print("b3 ", $b3.cell_value)
+#		$b3/correct.visible = true
 	
-	if ($c1.cell_value) == int(1):
-		print("c1 ", $c1.cell_value)
-		$c1/correct.visible = true
+#	if ($b4.cell_value) == int(1):
+#		print("b4 ", $b4.cell_value)
+#		$b4/correct.visible = true
+
+#	if ($b5.cell_value) == int(1):
+#		print("b5", $b5.cell_value)
+#		$b5/correct.visible = true
+
+#	if ($b6.cell_value) == int(1):
+#		print("b6", $b6.cell_value)
+#		$b6/correct.visible = true
+
+#	if ($b7.cell_value) == int(1):
+#		print("b7", $b7.cell_value)
+#		$b7/correct.visible = true
+
+#	if ($b8.cell_value) == int(1):
+#		print("b8", $b8.cell_value)
+#		$b4/correct.visible = true
 	
-	if ($c2.cell_value) == int(1):
-		print("c2 ", $c2.cell_value)
-		$c2/correct.visible = true
+#	if ($c1.cell_value) == int(1):
+#		print("c1 ", $c1.cell_value)
+#		$c1/correct.visible = true
 	
-	if ($c3.cell_value) == int(1):
-		print("c3 ", $c3.cell_value)
-		$c3/correct.visible = true
+#	if ($c2.cell_value) == int(1):
+#		print("c2 ", $c2.cell_value)
+#		$c2/correct.visible = true
+	
+#	if ($c3.cell_value) == int(1):
+#		print("c3 ", $c3.cell_value)
+#		$c3/correct.visible = true
+	
+#	if ($c4.cell_value) == int(1):
+#		print("c4 ", $c4.cell_value)
+#		$c4/correct.visible = true
 
+	if ($c5.cell_value) == int(1):
+		print("c5", $c5.cell_value)
+		$c5/correct.visible = true
+		
+#	if ($c6.cell_value) == int(1):
+#		print("c6", $c6.cell_value)
+#		$c6/correct.visible = true
 
+#	if ($c7.cell_value) == int(1):
+#		print("c7", $c7.cell_value)
+#		$c7/correct.visible = true
 
-	if ($a1.cell_value) == int(0) and ($a2.cell_value) == int(1) and ($a3.cell_value) == int(0) and ($b1.cell_value) == int(0) and ($b2.cell_value) == int(0) and ($b3.cell_value) == int(1) and ($c1.cell_value) == int(1) and ($c2.cell_value) == int(0) and ($c3.cell_value) == int(0):
-		var complete = load("res://Scenes/9level0_complete.tscn").instance()
+#	if ($c8.cell_value) == int(1):
+#		print("c8", $c8.cell_value)
+#		$c4/correct.visible = true
+
+#	if ($d1.cell_value) == int(1):
+#		print("d1 ", $d1.cell_value)
+#		$d1/correct.visible = true
+	
+#	if ($d2.cell_value) == int(1):
+#		print("d2 ", $d2.cell_value)
+#		$d2/correct.visible = true
+	
+#	if ($d3.cell_value) == int(1):
+#		print("d3 ", $d3.cell_value)
+#		$d3/correct.visible = true
+	
+	if ($d4.cell_value) == int(1):
+		print("d4 ", $d4.cell_value)
+		$d4/correct.visible = true
+
+#	if ($d5.cell_value) == int(1):
+#		print("d5", $d5.cell_value)
+#		$d5/correct.visible = true
+
+#	if ($d6.cell_value) == int(1):
+#		print("d6", $d6.cell_value)
+#		$d6/correct.visible = true
+
+#	if ($d7.cell_value) == int(1):
+#		print("d7", $d7.cell_value)
+#		$d7/correct.visible = true
+
+#	if ($d8.cell_value) == int(1):
+#		print("d8", $d8.cell_value)
+#		$d4/correct.visible = true
+
+#	if ($e1.cell_value) == int(1):
+#		print("e1 ", $e1.cell_value)
+#		$e1/correct.visible = true
+	
+	if ($e2.cell_value) == int(1):
+		print("e2 ", $e2.cell_value)
+		$e2/correct.visible = true
+	
+#	if ($e3.cell_value) == int(1):
+#		print("e3 ", $e3.cell_value)
+#		$e3/correct.visible = true
+	
+#	if ($e4.cell_value) == int(1):
+#		print("e4 ", $e4.cell_value)
+#		$e4/correct.visible = true
+
+#	if ($f1.cell_value) == int(1):
+#		print("f1 ", $f1.cell_value)
+#		$f1/correct.visible = true
+	
+	if ($f2.cell_value) == int(1):
+		print("f2 ", $f2.cell_value)
+		$f2/correct.visible = true
+	
+#	if ($f3.cell_value) == int(1):
+#		print("f3 ", $f3.cell_value)
+#		$f3/correct.visible = true
+	
+#	if ($f4.cell_value) == int(1):
+#		print("f4 ", $f4.cell_value)
+#		$f4/correct.visible = true
+
+#	if ($g1.cell_value) == int(1):
+#		print("g1 ", $g1.cell_value)
+#		$g1/correct.visible = true
+	
+	if ($g2.cell_value) == int(1):
+		print("g2 ", $g2.cell_value)
+		$g2/correct.visible = true
+	
+#	if ($g3.cell_value) == int(1):
+#		print("g3 ", $g3.cell_value)
+#		$g3/correct.visible = true
+	
+#	if ($g4.cell_value) == int(1):
+#		print("g4 ", $g4.cell_value)
+#		$g4/correct.visible = true
+
+#	if ($h1.cell_value) == int(1):
+#		print("h1 ", $h1.cell_value)
+#		$h1/correct.visible = true
+	
+	if ($h2.cell_value) == int(1):
+		print("h2 ", $h2.cell_value)
+		$h2/correct.visible = true
+	
+#	if ($h3.cell_value) == int(1):
+#		print("h3 ", $h3.cell_value)
+#		$h3/correct.visible = true
+	
+#	if ($h4.cell_value) == int(1):
+#		print("h4 ", $h4.cell_value)
+#		$h4/correct.visible = true
+
+#
+
+	if ($a1.cell_value) == int(0) and ($a2.cell_value) == int(0) and ($a3.cell_value) == int(1) and ($a4.cell_value) == int(0) and ($a5.cell_value) == int(0) and ($b1.cell_value) == int(1) and ($b2.cell_value) == int(0) and ($b3.cell_value) == int(0) and ($b4.cell_value) == int(0) and ($b5.cell_value) == int(0) and ($c1.cell_value) == int(0) and ($c2.cell_value) == int(0) and ($c3.cell_value) == int(0) and ($c4.cell_value) == int(0) and ($c5.cell_value) == int(1) and ($d1.cell_value) == int(0) and ($d2.cell_value) == int(0) and ($d3.cell_value) == int(0) and ($d4.cell_value) == int(1) and ($d5.cell_value) == int(0) and ($e1.cell_value) == int(0) and ($e2.cell_value) == int(1) and ($e3.cell_value) == int(0) and ($e4.cell_value) == int(0) and ($e5.cell_value) == int(0):
+		var complete = load("res://Scenes/9level6_complete.tscn").instance()
 		add_child(complete)
 		remove_child(self)
+

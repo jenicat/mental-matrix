@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Images/help_button_hover.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/Brandon_reg.otf" type="DynamicFontData" id=2]
@@ -7,35 +7,21 @@
 [ext_resource path="res://Images/reset_button_click.png" type="Texture" id=5]
 [ext_resource path="res://Images/help_button_click.png" type="Texture" id=6]
 [ext_resource path="res://Fonts/Baloo-Regular.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://Images/level_6.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/cell.gd" type="Script" id=8]
 [ext_resource path="res://Scenes/a1.gd" type="Script" id=9]
 [ext_resource path="res://Images/check_button_click.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/9level10.gd" type="Script" id=11]
 [ext_resource path="res://Images/check_button_hover.png" type="Texture" id=12]
-[ext_resource path="res://Scenes/d4.gd" type="Script" id=13]
-[ext_resource path="res://Scenes/d2.gd" type="Script" id=14]
-[ext_resource path="res://Scenes/a3.gd" type="Script" id=15]
-[ext_resource path="res://Scenes/b2.gd" type="Script" id=16]
-[ext_resource path="res://Scenes/a4.gd" type="Script" id=17]
-[ext_resource path="res://Scenes/c3.gd" type="Script" id=18]
-[ext_resource path="res://Scenes/c1.gd" type="Script" id=19]
-[ext_resource path="res://Scenes/b1.gd" type="Script" id=20]
-[ext_resource path="res://Scenes/c4.gd" type="Script" id=21]
-[ext_resource path="res://Scenes/b3.gd" type="Script" id=22]
-[ext_resource path="res://Scenes/d3.gd" type="Script" id=23]
-[ext_resource path="res://Scenes/a2.gd" type="Script" id=24]
+[ext_resource path="res://Images/10 - bkgrd.png" type="Texture" id=13]
 [ext_resource path="res://Images/null_mark.png" type="Texture" id=25]
 [ext_resource path="res://Images/x_mark.png" type="Texture" id=26]
 [ext_resource path="res://Images/O_mark.png" type="Texture" id=27]
 [ext_resource path="res://Images/check_button.png" type="Texture" id=28]
 [ext_resource path="res://Images/exit_button_click.png" type="Texture" id=29]
 [ext_resource path="res://Images/exit_button_hover.png" type="Texture" id=30]
-[ext_resource path="res://Scenes/d1.gd" type="Script" id=31]
 [ext_resource path="res://Images/reset_button_hover.png" type="Texture" id=32]
 [ext_resource path="res://Images/reset_button.png" type="Texture" id=33]
-[ext_resource path="res://Scenes/b4.gd" type="Script" id=34]
 [ext_resource path="res://Images/correct_100.png" type="Texture" id=35]
-[ext_resource path="res://Scenes/c2.gd" type="Script" id=36]
 
 [sub_resource type="DynamicFont" id=4]
 size = 24
@@ -66,8 +52,8 @@ margin_right = 1024.0
 margin_bottom = 600.0
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 8 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
 centered = false
 
 [node name="level" type="Label" parent="."]
@@ -277,15 +263,16 @@ text = "gardener"
 valign = 1
 
 [node name="a1" type="AspectRatioContainer" parent="."]
-margin_left = 399.0
-margin_top = 212.0
-margin_right = 459.0
-margin_bottom = 272.0
+margin_left = 396.0
+margin_top = 198.0
+margin_right = 436.0
+margin_bottom = 258.0
 script = ExtResource( 9 )
 
 [node name="yes_button" type="TextureButton" parent="a1"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -294,8 +281,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="a1"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -303,8 +291,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="a1"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -314,25 +303,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="a1"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="a1"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="a2" type="AspectRatioContainer" parent="."]
-margin_left = 469.0
-margin_top = 212.0
-margin_right = 529.0
-margin_bottom = 272.0
-script = ExtResource( 24 )
+margin_left = 440.0
+margin_top = 198.0
+margin_right = 480.0
+margin_bottom = 258.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="a2"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -341,8 +332,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="a2"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -350,8 +342,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="a2"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -361,25 +354,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="a2"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="a2"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="a3" type="AspectRatioContainer" parent="."]
-margin_left = 539.0
-margin_top = 212.0
-margin_right = 599.0
-margin_bottom = 272.0
-script = ExtResource( 15 )
+margin_left = 484.0
+margin_top = 198.0
+margin_right = 524.0
+margin_bottom = 258.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="a3"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -388,8 +383,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="a3"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -397,8 +393,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="a3"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -408,25 +405,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="a3"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="a3"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="a4" type="AspectRatioContainer" parent="."]
-margin_left = 609.0
-margin_top = 212.0
-margin_right = 669.0
-margin_bottom = 272.0
-script = ExtResource( 17 )
+margin_left = 527.0
+margin_top = 198.0
+margin_right = 567.0
+margin_bottom = 258.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="a4"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -435,8 +434,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="a4"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -444,8 +444,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="a4"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -455,25 +456,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="a4"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="a4"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="a5" type="AspectRatioContainer" parent="."]
-margin_left = 679.0
-margin_top = 212.0
-margin_right = 739.0
-margin_bottom = 272.0
-script = ExtResource( 17 )
+margin_left = 571.0
+margin_top = 198.0
+margin_right = 611.0
+margin_bottom = 258.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="a5"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -482,8 +485,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="a5"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -491,8 +495,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="a5"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -502,25 +507,180 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="a5"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="a5"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="a6" type="AspectRatioContainer" parent="."]
+margin_left = 615.0
+margin_top = 198.0
+margin_right = 655.0
+margin_bottom = 258.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="a6"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="a6"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="a6"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="a6"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="a6"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="a7" type="AspectRatioContainer" parent="."]
+margin_left = 658.0
+margin_top = 198.0
+margin_right = 698.0
+margin_bottom = 258.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="a7"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="a7"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="a7"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="a7"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="a7"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="a8" type="AspectRatioContainer" parent="."]
+margin_left = 702.0
+margin_top = 198.0
+margin_right = 742.0
+margin_bottom = 258.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="a8"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="a8"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="a8"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="a8"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="a8"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="b1" type="AspectRatioContainer" parent="."]
-margin_left = 399.0
-margin_top = 284.0
-margin_right = 459.0
-margin_bottom = 344.0
-script = ExtResource( 20 )
+margin_left = 396.0
+margin_top = 242.0
+margin_right = 436.0
+margin_bottom = 302.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="b1"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -529,8 +689,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="b1"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -538,8 +699,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="b1"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -549,25 +711,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="b1"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="b1"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="b2" type="AspectRatioContainer" parent="."]
-margin_left = 469.0
-margin_top = 284.0
-margin_right = 529.0
-margin_bottom = 344.0
-script = ExtResource( 16 )
+margin_left = 440.0
+margin_top = 242.0
+margin_right = 480.0
+margin_bottom = 302.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="b2"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -576,8 +740,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="b2"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -585,8 +750,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="b2"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -596,25 +762,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="b2"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="b2"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="b3" type="AspectRatioContainer" parent="."]
-margin_left = 539.0
-margin_top = 284.0
-margin_right = 599.0
-margin_bottom = 344.0
-script = ExtResource( 22 )
+margin_left = 484.0
+margin_top = 242.0
+margin_right = 524.0
+margin_bottom = 302.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="b3"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -623,8 +791,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="b3"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -632,8 +801,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="b3"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -643,25 +813,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="b3"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="b3"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="b4" type="AspectRatioContainer" parent="."]
-margin_left = 609.0
-margin_top = 284.0
-margin_right = 669.0
-margin_bottom = 344.0
-script = ExtResource( 34 )
+margin_left = 527.0
+margin_top = 242.0
+margin_right = 567.0
+margin_bottom = 302.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="b4"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -670,8 +842,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="b4"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -679,8 +852,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="b4"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -690,25 +864,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="b4"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="b4"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="b5" type="AspectRatioContainer" parent="."]
-margin_left = 679.0
-margin_top = 284.0
-margin_right = 739.0
-margin_bottom = 344.0
-script = ExtResource( 34 )
+margin_left = 571.0
+margin_top = 242.0
+margin_right = 611.0
+margin_bottom = 302.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="b5"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -717,8 +893,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="b5"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -726,8 +903,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="b5"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -737,25 +915,180 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="b5"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="b5"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="b6" type="AspectRatioContainer" parent="."]
+margin_left = 615.0
+margin_top = 242.0
+margin_right = 655.0
+margin_bottom = 302.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="b6"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="b6"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="b6"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="b6"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="b6"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="b7" type="AspectRatioContainer" parent="."]
+margin_left = 658.0
+margin_top = 242.0
+margin_right = 698.0
+margin_bottom = 302.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="b7"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="b7"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="b7"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="b7"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="b7"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="b8" type="AspectRatioContainer" parent="."]
+margin_left = 702.0
+margin_top = 242.0
+margin_right = 742.0
+margin_bottom = 302.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="b8"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="b8"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="b8"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="b8"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="b8"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="c1" type="AspectRatioContainer" parent="."]
-margin_left = 399.0
-margin_top = 355.0
-margin_right = 459.0
-margin_bottom = 415.0
-script = ExtResource( 19 )
+margin_left = 396.0
+margin_top = 287.0
+margin_right = 436.0
+margin_bottom = 347.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="c1"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -764,8 +1097,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="c1"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -773,8 +1107,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="c1"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -784,25 +1119,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="c1"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="c1"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="c2" type="AspectRatioContainer" parent="."]
-margin_left = 469.0
-margin_top = 355.0
-margin_right = 529.0
-margin_bottom = 415.0
-script = ExtResource( 36 )
+margin_left = 440.0
+margin_top = 287.0
+margin_right = 480.0
+margin_bottom = 347.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="c2"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -811,8 +1148,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="c2"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -820,8 +1158,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="c2"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -831,25 +1170,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="c2"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="c2"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="c3" type="AspectRatioContainer" parent="."]
-margin_left = 539.0
-margin_top = 355.0
-margin_right = 599.0
-margin_bottom = 415.0
-script = ExtResource( 18 )
+margin_left = 484.0
+margin_top = 287.0
+margin_right = 524.0
+margin_bottom = 347.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="c3"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -858,8 +1199,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="c3"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -867,8 +1209,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="c3"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -878,25 +1221,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="c3"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="c3"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="c4" type="AspectRatioContainer" parent="."]
-margin_left = 609.0
-margin_top = 355.0
-margin_right = 669.0
-margin_bottom = 415.0
-script = ExtResource( 21 )
+margin_left = 527.0
+margin_top = 287.0
+margin_right = 567.0
+margin_bottom = 347.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="c4"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -905,8 +1250,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="c4"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -914,8 +1260,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="c4"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -925,25 +1272,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="c4"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="c4"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="c5" type="AspectRatioContainer" parent="."]
-margin_left = 679.0
-margin_top = 355.0
-margin_right = 739.0
-margin_bottom = 415.0
-script = ExtResource( 21 )
+margin_left = 571.0
+margin_top = 287.0
+margin_right = 611.0
+margin_bottom = 347.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="c5"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -952,8 +1301,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="c5"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -961,8 +1311,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="c5"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -972,25 +1323,180 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="c5"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="c5"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="c6" type="AspectRatioContainer" parent="."]
+margin_left = 615.0
+margin_top = 287.0
+margin_right = 655.0
+margin_bottom = 347.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="c6"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="c6"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="c6"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="c6"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="c6"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="c7" type="AspectRatioContainer" parent="."]
+margin_left = 658.0
+margin_top = 287.0
+margin_right = 698.0
+margin_bottom = 347.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="c7"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="c7"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="c7"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="c7"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="c7"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="c8" type="AspectRatioContainer" parent="."]
+margin_left = 702.0
+margin_top = 287.0
+margin_right = 742.0
+margin_bottom = 347.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="c8"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="c8"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="c8"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="c8"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="c8"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="d1" type="AspectRatioContainer" parent="."]
-margin_left = 399.0
-margin_top = 426.0
-margin_right = 459.0
-margin_bottom = 486.0
-script = ExtResource( 31 )
+margin_left = 396.0
+margin_top = 332.0
+margin_right = 436.0
+margin_bottom = 392.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="d1"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -999,8 +1505,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="d1"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -1008,8 +1515,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="d1"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -1019,25 +1527,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="d1"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="d1"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="d2" type="AspectRatioContainer" parent="."]
-margin_left = 469.0
-margin_top = 426.0
-margin_right = 529.0
-margin_bottom = 486.0
-script = ExtResource( 14 )
+margin_left = 440.0
+margin_top = 332.0
+margin_right = 480.0
+margin_bottom = 392.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="d2"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -1046,8 +1556,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="d2"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -1055,8 +1566,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="d2"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -1066,25 +1578,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="d2"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="d2"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="d3" type="AspectRatioContainer" parent="."]
-margin_left = 539.0
-margin_top = 426.0
-margin_right = 599.0
-margin_bottom = 486.0
-script = ExtResource( 23 )
+margin_left = 484.0
+margin_top = 332.0
+margin_right = 524.0
+margin_bottom = 392.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="d3"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -1093,8 +1607,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="d3"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -1102,8 +1617,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="d3"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -1113,25 +1629,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="d3"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="d3"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="d4" type="AspectRatioContainer" parent="."]
-margin_left = 609.0
-margin_top = 426.0
-margin_right = 669.0
-margin_bottom = 486.0
-script = ExtResource( 13 )
+margin_left = 527.0
+margin_top = 332.0
+margin_right = 567.0
+margin_bottom = 392.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="d4"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -1140,8 +1658,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="d4"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -1149,8 +1668,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="d4"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -1160,25 +1680,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="d4"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="d4"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="d5" type="AspectRatioContainer" parent="."]
-margin_left = 679.0
-margin_top = 426.0
-margin_right = 739.0
-margin_bottom = 486.0
-script = ExtResource( 13 )
+margin_left = 571.0
+margin_top = 332.0
+margin_right = 611.0
+margin_bottom = 392.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="d5"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -1187,8 +1709,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="d5"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -1196,8 +1719,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="d5"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -1207,25 +1731,180 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="d5"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="d5"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="d6" type="AspectRatioContainer" parent="."]
+margin_left = 615.0
+margin_top = 332.0
+margin_right = 655.0
+margin_bottom = 392.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="d6"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="d6"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="d6"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="d6"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="d6"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="d7" type="AspectRatioContainer" parent="."]
+margin_left = 658.0
+margin_top = 332.0
+margin_right = 698.0
+margin_bottom = 392.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="d7"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="d7"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="d7"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="d7"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="d7"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="d8" type="AspectRatioContainer" parent="."]
+margin_left = 702.0
+margin_top = 332.0
+margin_right = 742.0
+margin_bottom = 392.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="d8"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="d8"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="d8"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="d8"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="d8"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="e1" type="AspectRatioContainer" parent="."]
-margin_left = 399.0
-margin_top = 498.0
-margin_right = 459.0
-margin_bottom = 558.0
-script = ExtResource( 13 )
+margin_left = 396.0
+margin_top = 376.0
+margin_right = 436.0
+margin_bottom = 436.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="e1"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -1234,8 +1913,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="e1"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -1243,8 +1923,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="e1"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -1254,25 +1935,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="e1"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="e1"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="e2" type="AspectRatioContainer" parent="."]
-margin_left = 469.0
-margin_top = 498.0
-margin_right = 529.0
-margin_bottom = 558.0
-script = ExtResource( 13 )
+margin_left = 440.0
+margin_top = 376.0
+margin_right = 480.0
+margin_bottom = 436.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="e2"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -1281,8 +1964,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="e2"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -1290,8 +1974,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="e2"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -1301,25 +1986,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="e2"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="e2"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="e3" type="AspectRatioContainer" parent="."]
-margin_left = 539.0
-margin_top = 498.0
-margin_right = 599.0
-margin_bottom = 558.0
-script = ExtResource( 13 )
+margin_left = 484.0
+margin_top = 376.0
+margin_right = 524.0
+margin_bottom = 436.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="e3"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -1328,8 +2015,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="e3"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -1337,8 +2025,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="e3"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -1348,25 +2037,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="e3"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="e3"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [node name="e4" type="AspectRatioContainer" parent="."]
-margin_left = 609.0
-margin_top = 498.0
-margin_right = 669.0
-margin_bottom = 558.0
-script = ExtResource( 13 )
+margin_left = 527.0
+margin_top = 376.0
+margin_right = 567.0
+margin_bottom = 436.0
+script = ExtResource( 8 )
 
 [node name="yes_button" type="TextureButton" parent="e4"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -1375,8 +2066,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="no_button" type="TextureButton" parent="e4"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
@@ -1384,8 +2076,9 @@ stretch_mode = 5
 flip_v = true
 
 [node name="null_button" type="TextureButton" parent="e4"]
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
@@ -1395,25 +2088,27 @@ flip_v = true
 [node name="incorrect" type="ColorRect" parent="e4"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
 [node name="correct" type="Sprite" parent="e4"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
-[node name="e5" type="AspectRatioContainer" parent="."]
-margin_left = 679.0
-margin_top = 498.0
-margin_right = 739.0
-margin_bottom = 558.0
-script = ExtResource( 13 )
+[node name="f1" type="AspectRatioContainer" parent="."]
+margin_left = 396.0
+margin_top = 422.0
+margin_right = 436.0
+margin_bottom = 482.0
+script = ExtResource( 8 )
 
-[node name="yes_button" type="TextureButton" parent="e5"]
-margin_right = 60.0
-margin_bottom = 60.0
+[node name="yes_button" type="TextureButton" parent="f1"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 theme = SubResource( 9 )
 group = SubResource( 7 )
 texture_normal = ExtResource( 27 )
@@ -1421,38 +2116,602 @@ expand = true
 stretch_mode = 5
 flip_v = true
 
-[node name="no_button" type="TextureButton" parent="e5"]
-margin_right = 60.0
-margin_bottom = 60.0
+[node name="no_button" type="TextureButton" parent="f1"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 26 )
 expand = true
 stretch_mode = 5
 flip_v = true
 
-[node name="null_button" type="TextureButton" parent="e5"]
-margin_right = 60.0
-margin_bottom = 60.0
+[node name="null_button" type="TextureButton" parent="f1"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 group = SubResource( 7 )
 texture_normal = ExtResource( 25 )
 expand = true
 stretch_mode = 5
 flip_v = true
 
-[node name="incorrect" type="ColorRect" parent="e5"]
+[node name="incorrect" type="ColorRect" parent="f1"]
 visible = false
 light_mask = 0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
-[node name="correct" type="Sprite" parent="e5"]
-position = Vector2( 29.7102, 30.76 )
-scale = Vector2( 0.227, 0.225 )
+[node name="correct" type="Sprite" parent="f1"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="f2" type="AspectRatioContainer" parent="."]
+margin_left = 440.0
+margin_top = 422.0
+margin_right = 480.0
+margin_bottom = 482.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="f2"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="f2"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="f2"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="f2"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="f2"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="f3" type="AspectRatioContainer" parent="."]
+margin_left = 484.0
+margin_top = 422.0
+margin_right = 524.0
+margin_bottom = 482.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="f3"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="f3"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="f3"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="f3"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="f3"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="f4" type="AspectRatioContainer" parent="."]
+margin_left = 527.0
+margin_top = 422.0
+margin_right = 567.0
+margin_bottom = 482.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="f4"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="f4"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="f4"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="f4"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="f4"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="g1" type="AspectRatioContainer" parent="."]
+margin_left = 396.0
+margin_top = 467.0
+margin_right = 436.0
+margin_bottom = 527.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="g1"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="g1"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="g1"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="g1"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="g1"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="g2" type="AspectRatioContainer" parent="."]
+margin_left = 440.0
+margin_top = 467.0
+margin_right = 480.0
+margin_bottom = 527.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="g2"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="g2"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="g2"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="g2"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="g2"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="g3" type="AspectRatioContainer" parent="."]
+margin_left = 484.0
+margin_top = 467.0
+margin_right = 524.0
+margin_bottom = 527.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="g3"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="g3"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="g3"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="g3"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="g3"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="g4" type="AspectRatioContainer" parent="."]
+margin_left = 527.0
+margin_top = 467.0
+margin_right = 567.0
+margin_bottom = 527.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="g4"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="g4"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="g4"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="g4"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="g4"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="h1" type="AspectRatioContainer" parent="."]
+margin_left = 396.0
+margin_top = 511.0
+margin_right = 436.0
+margin_bottom = 571.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="h1"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="h1"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="h1"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="h1"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="h1"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="h2" type="AspectRatioContainer" parent="."]
+margin_left = 440.0
+margin_top = 511.0
+margin_right = 480.0
+margin_bottom = 571.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="h2"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="h2"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="h2"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="h2"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="h2"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="h3" type="AspectRatioContainer" parent="."]
+margin_left = 484.0
+margin_top = 511.0
+margin_right = 524.0
+margin_bottom = 571.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="h3"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="h3"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="h3"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="h3"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="h3"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 35 )
+
+[node name="h4" type="AspectRatioContainer" parent="."]
+margin_left = 527.0
+margin_top = 511.0
+margin_right = 567.0
+margin_bottom = 571.0
+script = ExtResource( 8 )
+
+[node name="yes_button" type="TextureButton" parent="h4"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+theme = SubResource( 9 )
+group = SubResource( 7 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="no_button" type="TextureButton" parent="h4"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 26 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="null_button" type="TextureButton" parent="h4"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+group = SubResource( 7 )
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+flip_v = true
+
+[node name="incorrect" type="ColorRect" parent="h4"]
+visible = false
+light_mask = 0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 50.0
+color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
+
+[node name="correct" type="Sprite" parent="h4"]
+position = Vector2( 20, 30 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 35 )
 
 [connection signal="pressed" from="exit_button" to="." method="_on_exit_button_pressed"]
-[connection signal="pressed" from="help_button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="help_button" to="." method="_on_help_button_pressed"]
 [connection signal="pressed" from="reset_button" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="check_button" to="." method="_on_check_button_pressed"]
 [connection signal="pressed" from="a1/yes_button" to="a1" method="_on_yes_button_pressed"]
@@ -1470,6 +2729,15 @@ texture = ExtResource( 35 )
 [connection signal="pressed" from="a5/yes_button" to="a5" method="_on_yes_button_pressed"]
 [connection signal="pressed" from="a5/no_button" to="a5" method="_on_no_button_pressed"]
 [connection signal="pressed" from="a5/null_button" to="a5" method="_on_null_button_pressed"]
+[connection signal="pressed" from="a6/yes_button" to="a6" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="a6/no_button" to="a6" method="_on_no_button_pressed"]
+[connection signal="pressed" from="a6/null_button" to="a6" method="_on_null_button_pressed"]
+[connection signal="pressed" from="a7/yes_button" to="a7" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="a7/no_button" to="a7" method="_on_no_button_pressed"]
+[connection signal="pressed" from="a7/null_button" to="a7" method="_on_null_button_pressed"]
+[connection signal="pressed" from="a8/yes_button" to="a8" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="a8/no_button" to="a8" method="_on_no_button_pressed"]
+[connection signal="pressed" from="a8/null_button" to="a8" method="_on_null_button_pressed"]
 [connection signal="pressed" from="b1/yes_button" to="b1" method="_on_yes_button_pressed"]
 [connection signal="pressed" from="b1/no_button" to="b1" method="_on_no_button_pressed"]
 [connection signal="pressed" from="b1/null_button" to="b1" method="_on_null_button_pressed"]
@@ -1485,6 +2753,15 @@ texture = ExtResource( 35 )
 [connection signal="pressed" from="b5/yes_button" to="b5" method="_on_yes_button_pressed"]
 [connection signal="pressed" from="b5/no_button" to="b5" method="_on_no_button_pressed"]
 [connection signal="pressed" from="b5/null_button" to="b5" method="_on_null_button_pressed"]
+[connection signal="pressed" from="b6/yes_button" to="b6" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="b6/no_button" to="b6" method="_on_no_button_pressed"]
+[connection signal="pressed" from="b6/null_button" to="b6" method="_on_null_button_pressed"]
+[connection signal="pressed" from="b7/yes_button" to="b7" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="b7/no_button" to="b7" method="_on_no_button_pressed"]
+[connection signal="pressed" from="b7/null_button" to="b7" method="_on_null_button_pressed"]
+[connection signal="pressed" from="b8/yes_button" to="b8" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="b8/no_button" to="b8" method="_on_no_button_pressed"]
+[connection signal="pressed" from="b8/null_button" to="b8" method="_on_null_button_pressed"]
 [connection signal="pressed" from="c1/yes_button" to="c1" method="_on_yes_button_pressed"]
 [connection signal="pressed" from="c1/no_button" to="c1" method="_on_no_button_pressed"]
 [connection signal="pressed" from="c1/null_button" to="c1" method="_on_null_button_pressed"]
@@ -1500,6 +2777,15 @@ texture = ExtResource( 35 )
 [connection signal="pressed" from="c5/yes_button" to="c5" method="_on_yes_button_pressed"]
 [connection signal="pressed" from="c5/no_button" to="c5" method="_on_no_button_pressed"]
 [connection signal="pressed" from="c5/null_button" to="c5" method="_on_null_button_pressed"]
+[connection signal="pressed" from="c6/yes_button" to="c6" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="c6/no_button" to="c6" method="_on_no_button_pressed"]
+[connection signal="pressed" from="c6/null_button" to="c6" method="_on_null_button_pressed"]
+[connection signal="pressed" from="c7/yes_button" to="c7" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="c7/no_button" to="c7" method="_on_no_button_pressed"]
+[connection signal="pressed" from="c7/null_button" to="c7" method="_on_null_button_pressed"]
+[connection signal="pressed" from="c8/yes_button" to="c8" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="c8/no_button" to="c8" method="_on_no_button_pressed"]
+[connection signal="pressed" from="c8/null_button" to="c8" method="_on_null_button_pressed"]
 [connection signal="pressed" from="d1/yes_button" to="d1" method="_on_yes_button_pressed"]
 [connection signal="pressed" from="d1/no_button" to="d1" method="_on_no_button_pressed"]
 [connection signal="pressed" from="d1/null_button" to="d1" method="_on_null_button_pressed"]
@@ -1515,6 +2801,15 @@ texture = ExtResource( 35 )
 [connection signal="pressed" from="d5/yes_button" to="d5" method="_on_yes_button_pressed"]
 [connection signal="pressed" from="d5/no_button" to="d5" method="_on_no_button_pressed"]
 [connection signal="pressed" from="d5/null_button" to="d5" method="_on_null_button_pressed"]
+[connection signal="pressed" from="d6/yes_button" to="d6" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="d6/no_button" to="d6" method="_on_no_button_pressed"]
+[connection signal="pressed" from="d6/null_button" to="d6" method="_on_null_button_pressed"]
+[connection signal="pressed" from="d7/yes_button" to="d7" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="d7/no_button" to="d7" method="_on_no_button_pressed"]
+[connection signal="pressed" from="d7/null_button" to="d7" method="_on_null_button_pressed"]
+[connection signal="pressed" from="d8/yes_button" to="d8" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="d8/no_button" to="d8" method="_on_no_button_pressed"]
+[connection signal="pressed" from="d8/null_button" to="d8" method="_on_null_button_pressed"]
 [connection signal="pressed" from="e1/yes_button" to="e1" method="_on_yes_button_pressed"]
 [connection signal="pressed" from="e1/no_button" to="e1" method="_on_no_button_pressed"]
 [connection signal="pressed" from="e1/null_button" to="e1" method="_on_null_button_pressed"]
@@ -1527,6 +2822,39 @@ texture = ExtResource( 35 )
 [connection signal="pressed" from="e4/yes_button" to="e4" method="_on_yes_button_pressed"]
 [connection signal="pressed" from="e4/no_button" to="e4" method="_on_no_button_pressed"]
 [connection signal="pressed" from="e4/null_button" to="e4" method="_on_null_button_pressed"]
-[connection signal="pressed" from="e5/yes_button" to="e5" method="_on_yes_button_pressed"]
-[connection signal="pressed" from="e5/no_button" to="e5" method="_on_no_button_pressed"]
-[connection signal="pressed" from="e5/null_button" to="e5" method="_on_null_button_pressed"]
+[connection signal="pressed" from="f1/yes_button" to="f1" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="f1/no_button" to="f1" method="_on_no_button_pressed"]
+[connection signal="pressed" from="f1/null_button" to="f1" method="_on_null_button_pressed"]
+[connection signal="pressed" from="f2/yes_button" to="f2" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="f2/no_button" to="f2" method="_on_no_button_pressed"]
+[connection signal="pressed" from="f2/null_button" to="f2" method="_on_null_button_pressed"]
+[connection signal="pressed" from="f3/yes_button" to="f3" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="f3/no_button" to="f3" method="_on_no_button_pressed"]
+[connection signal="pressed" from="f3/null_button" to="f3" method="_on_null_button_pressed"]
+[connection signal="pressed" from="f4/yes_button" to="f4" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="f4/no_button" to="f4" method="_on_no_button_pressed"]
+[connection signal="pressed" from="f4/null_button" to="f4" method="_on_null_button_pressed"]
+[connection signal="pressed" from="g1/yes_button" to="g1" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="g1/no_button" to="g1" method="_on_no_button_pressed"]
+[connection signal="pressed" from="g1/null_button" to="g1" method="_on_null_button_pressed"]
+[connection signal="pressed" from="g2/yes_button" to="g2" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="g2/no_button" to="g2" method="_on_no_button_pressed"]
+[connection signal="pressed" from="g2/null_button" to="g2" method="_on_null_button_pressed"]
+[connection signal="pressed" from="g3/yes_button" to="g3" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="g3/no_button" to="g3" method="_on_no_button_pressed"]
+[connection signal="pressed" from="g3/null_button" to="g3" method="_on_null_button_pressed"]
+[connection signal="pressed" from="g4/yes_button" to="g4" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="g4/no_button" to="g4" method="_on_no_button_pressed"]
+[connection signal="pressed" from="g4/null_button" to="g4" method="_on_null_button_pressed"]
+[connection signal="pressed" from="h1/yes_button" to="h1" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="h1/no_button" to="h1" method="_on_no_button_pressed"]
+[connection signal="pressed" from="h1/null_button" to="h1" method="_on_null_button_pressed"]
+[connection signal="pressed" from="h2/yes_button" to="h2" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="h2/no_button" to="h2" method="_on_no_button_pressed"]
+[connection signal="pressed" from="h2/null_button" to="h2" method="_on_null_button_pressed"]
+[connection signal="pressed" from="h3/yes_button" to="h3" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="h3/no_button" to="h3" method="_on_no_button_pressed"]
+[connection signal="pressed" from="h3/null_button" to="h3" method="_on_null_button_pressed"]
+[connection signal="pressed" from="h4/yes_button" to="h4" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="h4/no_button" to="h4" method="_on_no_button_pressed"]
+[connection signal="pressed" from="h4/null_button" to="h4" method="_on_null_button_pressed"]

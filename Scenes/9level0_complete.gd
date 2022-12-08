@@ -10,7 +10,7 @@ func _on_click_to_continue_pressed():
 	var level_1 = load("res://Scenes/9level1.tscn").instance()
 	add_child(level_1)
 	remove_child(self)
-	print("Exit intro scene")
+	print("Exit level 0")
 	
 	
 

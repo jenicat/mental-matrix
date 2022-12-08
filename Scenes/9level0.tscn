@@ -1,7 +1,8 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://Images/level_1.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/9level0.gd" type="Script" id=2]
+[ext_resource path="res://Images/Tutorials/tut9@2x.png" type="Texture" id=3]
 [ext_resource path="res://Images/check_button_hover.png" type="Texture" id=4]
 [ext_resource path="res://Fonts/Baloo-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Images/help_button.png" type="Texture" id=6]
@@ -9,26 +10,38 @@
 [ext_resource path="res://Images/check_button.png" type="Texture" id=8]
 [ext_resource path="res://Images/reset_button_click.png" type="Texture" id=9]
 [ext_resource path="res://Images/help_button_click.png" type="Texture" id=10]
+[ext_resource path="res://Images/Tutorials/tut1@2x.png" type="Texture" id=11]
 [ext_resource path="res://Images/check_button_click.png" type="Texture" id=12]
 [ext_resource path="res://Images/exit_button.png" type="Texture" id=13]
 [ext_resource path="res://Scenes/a1.gd" type="Script" id=14]
 [ext_resource path="res://Scenes/a3.gd" type="Script" id=15]
 [ext_resource path="res://Scenes/b2.gd" type="Script" id=16]
+[ext_resource path="res://Images/Tutorials/tut2@2x.png" type="Texture" id=17]
 [ext_resource path="res://Images/help_button_hover.png" type="Texture" id=18]
 [ext_resource path="res://Images/exit_button_click.png" type="Texture" id=19]
 [ext_resource path="res://Images/exit_button_hover.png" type="Texture" id=20]
+[ext_resource path="res://Images/Tutorials/tut8@2x.png" type="Texture" id=21]
 [ext_resource path="res://Images/null_mark.png" type="Texture" id=22]
 [ext_resource path="res://Images/x_mark.png" type="Texture" id=23]
 [ext_resource path="res://Images/O_mark.png" type="Texture" id=24]
 [ext_resource path="res://Images/reset_button_hover.png" type="Texture" id=25]
 [ext_resource path="res://Images/reset_button.png" type="Texture" id=26]
+[ext_resource path="res://Images/Tutorials/tut7@2x.png" type="Texture" id=27]
 [ext_resource path="res://Images/correct_100.png" type="Texture" id=28]
 [ext_resource path="res://Scenes/c3.gd" type="Script" id=29]
 [ext_resource path="res://Scenes/c1.gd" type="Script" id=30]
 [ext_resource path="res://Scenes/b1.gd" type="Script" id=31]
+[ext_resource path="res://Images/Tutorials/tut4@2x.png" type="Texture" id=32]
 [ext_resource path="res://Scenes/b3.gd" type="Script" id=33]
+[ext_resource path="res://Images/Tutorials/tut5@2x.png" type="Texture" id=34]
 [ext_resource path="res://Scenes/a2.gd" type="Script" id=35]
 [ext_resource path="res://Scenes/c2.gd" type="Script" id=36]
+[ext_resource path="res://Images/Tutorials/tut6@2x.png" type="Texture" id=37]
+[ext_resource path="res://Images/Tutorials/tut3@2x.png" type="Texture" id=38]
+[ext_resource path="res://Images/Tutorials/tut11@2x.png" type="Texture" id=39]
+[ext_resource path="res://Images/Tutorials/tut12@2x.png" type="Texture" id=40]
+[ext_resource path="res://Images/Tutorials/tut10@2x.png" type="Texture" id=41]
+[ext_resource path="res://Images/Tutorials/tut13@2x.png" type="Texture" id=42]
 
 [sub_resource type="DynamicFont" id=4]
 size = 24
@@ -58,7 +71,7 @@ script = ExtResource( 2 )
 margin_right = 1024.0
 margin_bottom = 600.0
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="background" type="Sprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 1 )
 centered = false
@@ -70,7 +83,7 @@ margin_right = 195.0
 margin_bottom = 110.0
 custom_colors/font_color = Color( 0.313726, 0.454902, 0.580392, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "LEVEL 0"
+text = "TUTORIAL"
 align = 1
 valign = 1
 
@@ -92,10 +105,9 @@ margin_top = 123.0
 margin_right = 962.0
 margin_bottom = 260.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_constants/line_spacing = -5
+custom_constants/line_spacing = -2
 custom_fonts/font = SubResource( 5 )
 text = "Nakasone is Kai's aunty.
-
 
 Igor's name is not Lorimer.
 "
@@ -642,6 +654,122 @@ margin_right = 70.0
 margin_bottom = 70.0
 color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 
+[node name="tut1" type="TextureButton" parent="."]
+margin_left = 175.0
+margin_top = 217.0
+margin_right = 874.0
+margin_bottom = 511.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 11 )
+
+[node name="tut2" type="TextureButton" parent="."]
+visible = false
+margin_left = 461.0
+margin_top = 146.0
+margin_right = 1150.0
+margin_bottom = 624.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 17 )
+
+[node name="tut3" type="TextureButton" parent="."]
+visible = false
+margin_left = 422.0
+margin_top = 86.0
+margin_right = 1578.0
+margin_bottom = 810.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 38 )
+
+[node name="tut4" type="TextureButton" parent="."]
+visible = false
+margin_left = 323.0
+margin_top = 329.0
+margin_right = 972.0
+margin_bottom = 719.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 32 )
+
+[node name="tut5" type="TextureButton" parent="."]
+visible = false
+margin_left = 424.0
+margin_top = 88.0
+margin_right = 1579.0
+margin_bottom = 714.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 34 )
+
+[node name="tut6" type="TextureButton" parent="."]
+visible = false
+margin_left = 456.0
+margin_top = 281.0
+margin_right = 952.0
+margin_bottom = 697.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 37 )
+
+[node name="tut7" type="TextureButton" parent="."]
+visible = false
+margin_left = 374.0
+margin_top = 91.0
+margin_right = 1621.0
+margin_bottom = 711.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 27 )
+
+[node name="tut8" type="TextureButton" parent="."]
+visible = false
+margin_left = 333.0
+margin_top = 182.0
+margin_right = 1009.0
+margin_bottom = 553.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 21 )
+
+[node name="tut9" type="TextureButton" parent="."]
+visible = false
+margin_left = 296.0
+margin_top = 53.0
+margin_right = 1027.0
+margin_bottom = 665.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 3 )
+
+[node name="tut10" type="TextureButton" parent="."]
+visible = false
+margin_left = 238.0
+margin_top = 308.0
+margin_right = 824.0
+margin_bottom = 864.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 41 )
+
+[node name="tut11" type="TextureButton" parent="."]
+visible = false
+margin_left = 200.0
+margin_top = 264.0
+margin_right = 873.0
+margin_bottom = 677.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 39 )
+
+[node name="tut12" type="TextureButton" parent="."]
+visible = false
+margin_left = 454.0
+margin_top = 200.0
+margin_right = 1027.0
+margin_bottom = 713.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 40 )
+
+[node name="tut13" type="TextureButton" parent="."]
+visible = false
+margin_left = 187.0
+margin_top = 338.0
+margin_right = 911.0
+margin_bottom = 774.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 42 )
+
 [connection signal="pressed" from="exit_button" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="help_button" to="." method="_on_help_button_pressed"]
 [connection signal="pressed" from="reset_button" to="." method="_on_reset_button_pressed"]
@@ -673,3 +801,16 @@ color = Color( 0.623529, 0.0823529, 0.0823529, 0.380392 )
 [connection signal="pressed" from="c3/yes_button" to="c3" method="_on_yes_button_pressed"]
 [connection signal="pressed" from="c3/no_button" to="c3" method="_on_no_button_pressed"]
 [connection signal="pressed" from="c3/null_button" to="c3" method="_on_null_button_pressed"]
+[connection signal="pressed" from="tut1" to="." method="_on_tut1_pressed"]
+[connection signal="pressed" from="tut2" to="." method="_on_tut2_pressed"]
+[connection signal="pressed" from="tut3" to="." method="_on_tut3_pressed"]
+[connection signal="pressed" from="tut4" to="." method="_on_tut4_pressed"]
+[connection signal="pressed" from="tut5" to="." method="_on_tut5_pressed"]
+[connection signal="pressed" from="tut6" to="." method="_on_tut6_pressed"]
+[connection signal="pressed" from="tut7" to="." method="_on_tut7_pressed"]
+[connection signal="pressed" from="tut8" to="." method="_on_tut8_pressed"]
+[connection signal="pressed" from="tut9" to="." method="_on_tut9_pressed"]
+[connection signal="pressed" from="tut10" to="." method="_on_tut10_pressed"]
+[connection signal="pressed" from="tut11" to="." method="_on_tut11_pressed"]
+[connection signal="pressed" from="tut12" to="." method="_on_tut12_pressed"]
+[connection signal="pressed" from="tut13" to="." method="_on_tut13_pressed"]

@@ -20,7 +20,7 @@ func _on_reset_button_pressed():
 func _on_help_button_pressed():
 	var help = load("res://Scenes/2intro.tscn").instance()
 	add_child(help)
-	remove_child(self) #SN - this is why your help thing isn't working. Its commented out on the previous levels but not here.
+	#remove_child(self) #SN - this is why your help thing isn't working. Its commented out on the previous levels but not here.
 	# SN - in general be careful copy pasting, you tend to forget. Try working on one getting it perfect, then copying when its done.
 
 		

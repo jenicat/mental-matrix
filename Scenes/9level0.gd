@@ -20,7 +20,7 @@ func _on_reset_button_pressed():
 func _on_help_button_pressed():
 	var help = load("res://Scenes/2intro.tscn").instance()
 	add_child(help)
-	#remove_child(self)
+
 
 		
 func _on_check_button_pressed():
@@ -70,3 +70,70 @@ func _on_check_button_pressed():
 		var complete = load("res://Scenes/9level0_complete.tscn").instance()
 		add_child(complete)
 		remove_child(self)
+
+
+func _on_tut1_pressed():
+	$tut1.visible = false
+	$tut2.visible = true
+
+
+func _on_tut2_pressed():
+	$tut2.visible = false
+	$tut3.visible = true
+
+
+func _on_tut3_pressed():
+	$tut3.visible = false
+	$tut4.visible = true
+
+
+func _on_tut4_pressed():
+	$tut4.visible = false
+	$tut5.visible = true
+
+
+func _on_tut5_pressed():
+	$tut5.visible = false
+	$tut6.visible = true
+
+
+func _on_tut6_pressed():
+	$tut6.visible = false
+	$tut7.visible = true
+
+
+func _on_tut7_pressed():
+	$tut7.visible = false
+	$tut8.visible = true
+
+
+func _on_tut8_pressed():
+	$tut8.visible = false
+	$tut9.visible = true
+
+
+func _on_tut9_pressed():
+	$tut9.visible = false
+	$tut10.visible = true
+
+
+func _on_tut10_pressed():
+	$tut10.visible = false
+	$tut11.visible = true
+
+
+func _on_tut11_pressed():
+	$tut11.visible = false
+	$tut12.visible = true
+	
+	
+func _on_tut12_pressed():
+	$tut12.visible = false
+	$tut13.visible = true
+
+
+func _on_tut13_pressed():
+	$tut13.visible = false
+	
+
+

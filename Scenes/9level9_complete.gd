@@ -4,6 +4,7 @@ extends Node2D
 func _ready():
 	print("The number of attempts is ", (Globals.attempts))
 	$Attempts.text = str(Globals.attempts)
+	Globals.level9_complete = true
 
 
 func _on_click_to_continue_pressed():
